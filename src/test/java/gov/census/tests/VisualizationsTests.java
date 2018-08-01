@@ -180,18 +180,17 @@ public class VisualizationsTests extends TestBase {
 	       //3 step
 	       Utils.clickJSE(vp.clickon2014);
 	       Assert.assertEquals(true, vp.clickon2014.isDisplayed());
-	       
-		}
+	       }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-
+		//Interactive Gallery TC16
+		@Test
+		public void interActiveGalleryisNotVisible() {
+			//1step
+			Utils.clickJSE(vp.libraryLink);
+			//2 step
+			Utils.clickJSE(vp.audioLink);
+			assertTrue(vp.interActiveGallery.isEnabled());
+			
 	// Verify content change according to a selection"TC12
 	@Test
 	public void changeOfContent() {
