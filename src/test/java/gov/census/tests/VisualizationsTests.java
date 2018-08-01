@@ -148,7 +148,7 @@ public class VisualizationsTests extends TestBase {
 	@Test
 	public void totalPages2017() {
 		gotoVisualizationPage();
-		Utils.clickJSE(vp.button2017);
+		Utils.clickJSE(vp.year2017);
 		String actualStr = vp.countPagesBlock.getText();
 		int actual = Utils.getTotalPages(actualStr);
 		int expected = 6;
@@ -160,36 +160,37 @@ public class VisualizationsTests extends TestBase {
 	@Test
 	public void content2017() {
 		gotoVisualizationPage();
-		Utils.clickJSE(vp.button2017);
+		Utils.clickJSE(vp.year2017);
 		assertEquals(vp.currentPageCount.getText(), "1");
 		String actual = vp.censusNavigator.getText().trim();
 		System.out.println(actual);
 		String expected = "Census Engagement Navigator";
 		assertEquals(actual, expected);
 	}
-	
-	//Verify dropdown functionality of Infographics and visualiation linkTC11
-		@Test
-		public void dropDown(){
-		//1step
-			Utils.clickJSE(vp.libraryLink);
-			Utils.clickJSE(vp.linkInfoAndVisualizations);
-	       Assert.assertEquals(false, vp.linkInfoAndVisualizations.isDisplayed());
-		//2step
-	       Utils.clickJSE(vp.dropDown);
-	       //3 step
-	       Utils.clickJSE(vp.clickon2014);
-	       Assert.assertEquals(true, vp.clickon2014.isDisplayed());
-	       }
-	
-		//Interactive Gallery TC16
-		@Test
+
+	// Verify dropdown functionality of Infographics and visualiation linkTC11
+	@Test
+	public void dropDown() {
+		// 1step
+		Utils.clickJSE(homePage.libraryLink);
+		Utils.clickJSE(homePage.linkInfoAndVisualizations);
+		assertTrue(!homePage.linkInfoAndVisualizations.isDisplayed());
+		// 2step
+		Utils.clickJSE(vp.dropDown);
+		// 3 step
+		Utils.clickJSE(vp.year2014);
+		assertTrue(vp.year2014.isDisplayed());
+	}
+
+	// Interactive Gallery TC16
+	@Test
 		public void interActiveGalleryisNotVisible() {
 			//1step
-			Utils.clickJSE(vp.libraryLink);
+			Utils.clickJSE(homePage.libraryLink);
 			//2 step
 			Utils.clickJSE(vp.audioLink);
 			assertTrue(vp.interActiveGallery.isEnabled());
+	}
 			
 	// Verify content change according to a selection"TC12
 	@Test
@@ -198,7 +199,7 @@ public class VisualizationsTests extends TestBase {
 		String actual = vp.contentOfPageText.getText();
 		String expected = "Infographics & Visualizations";
 		assertEquals(actual, expected);
-		Utils.clickJSE(vp.button2016);
+		Utils.clickJSE(vp.year2016);
 		Utils.clickJSE(vp.happyNewYear2017);
 		String actual2 = vp.contentOfPageText.getText();
 		String expected2 = "Happy New Year 2017";
@@ -227,8 +228,8 @@ public class VisualizationsTests extends TestBase {
 		assertTrue(vp.pinterest.isDisplayed());
 		assertTrue(vp.twitter.isDisplayed());
 	}
-	//DATE"	TC18
-	
+	// DATE" TC18
+
 	@Test
 	public void verifyData() {
 		gotoVisualizationPage();
@@ -238,8 +239,7 @@ public class VisualizationsTests extends TestBase {
 		Utils.waitFor(3);
 		assertTrue(vp.currectPageDate.isDisplayed());
 		assertTrue(vp.currectPicData.isDisplayed());
-		
+
 	}
-	
 
 }

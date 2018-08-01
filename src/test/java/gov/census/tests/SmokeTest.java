@@ -21,7 +21,7 @@ public class SmokeTest extends TestBase{
 	public void smoke() {
 		Utils.clickJSE(homePage.libraryLink);
 		Utils.clickJSE(homePage.linkInfoAndVisualizations);
-		Utils.clickJSE(vPage.button2015);
+		Utils.clickJSE(vPage.year2015);
 		List<WebElement> elementList = vPage.allPics;
 		List<String> list = Utils.getStringValueOfAllElements(elementList);
 		System.out.println(list);

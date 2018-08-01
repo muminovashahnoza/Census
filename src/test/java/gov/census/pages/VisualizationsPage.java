@@ -62,7 +62,7 @@ public class VisualizationsPage {
 	public WebElement dropDown;
 	
 	@FindBy(xpath="//a[@href='/library/visualizations.2014.html']")
-	public WebElement clickon2014;
+	public WebElement year2014;
 	
 	@FindBy(xpath="//a[@tabindex='405']")
 	public WebElement audioLink;
@@ -83,12 +83,12 @@ public class VisualizationsPage {
 	public WebElement prevPage;
 
 	@FindBy(xpath = "//a[@id='2017']")
-	public WebElement button2017;
+	public WebElement year2017;
 
 	@FindBy(xpath = "//a[@id='2016']")
-	public WebElement button2016;
+	public WebElement year2016;
 	@FindBy(id = "2015")
-	public WebElement button2015;
+	public WebElement year2015;
 
 	@FindBy(xpath = "(//div[@class='valignMiddle'])[1]")
 	public WebElement censusNavigator;
