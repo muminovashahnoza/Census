@@ -16,7 +16,7 @@ public class TestBase {
 	WebDriver driver;
 	Actions actions;
 
-	@BeforeMethod(alwaysRun = true)
+	@BeforeMethod(alwaysRun=true)
 	public void setUp() {
 		driver = Driver.getDriver();
 		actions = new Actions(driver);

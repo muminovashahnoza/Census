@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="HomePage Tests" verbose="2">
+
+	<test name="HomePage Automation Tests">
+		<classes>
+			<class name="gov.census.tests.HomePageTest">
+			<methods> 
+			<exclude name="libraryDropDownTest"   />
+			</methods>
+			
+			
+			</class>
+		</classes>
+	</test>
+
+</suite>
