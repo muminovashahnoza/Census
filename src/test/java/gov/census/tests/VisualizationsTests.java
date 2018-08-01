@@ -167,6 +167,30 @@ public class VisualizationsTests extends TestBase {
 		String expected = "Census Engagement Navigator";
 		assertEquals(actual, expected);
 	}
+	
+	//Verify dropdown functionality of Infographics and visualiation linkTC11
+		@Test
+		public void dropDown(){
+		//1step
+			Utils.clickJSE(vp.libraryLink);
+			Utils.clickJSE(vp.linkInfoAndVisualizations);
+	       Assert.assertEquals(false, vp.linkInfoAndVisualizations.isDisplayed());
+		//2step
+	       Utils.clickJSE(vp.dropDown);
+	       //3 step
+	       Utils.clickJSE(vp.clickon2014);
+	       Assert.assertEquals(true, vp.clickon2014.isDisplayed());
+	       
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	// Verify content change according to a selection"TC12
 	@Test

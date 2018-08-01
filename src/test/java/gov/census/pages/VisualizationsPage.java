@@ -58,7 +58,18 @@ public class VisualizationsPage {
 	// <h2 class="sh-h2">Infographics &amp; Visualizations</h2>
 	@FindBy(xpath = "//h2[@class='sh-h2']")
 	public WebElement contentOfPageText;
-
+	@FindBy(xpath="//a[@class='toggle_dropdown']")
+	public WebElement dropDown;
+	
+	@FindBy(xpath="//a[@href='/library/visualizations.2014.html']")
+	public WebElement clickon2014;
+	
+	@FindBy(xpath="//a[@tabindex='405']")
+	public WebElement audioLink;
+	
+	@FindBy(xpath="//a[@tabindex='510']")
+	public WebElement interActiveGallery;
+	
 	@FindBy(xpath = "//div[@class='paginationInfo']//ul")
 	public WebElement countPagesBlock;
 
