@@ -25,7 +25,7 @@ public class VisualizationsTests extends TestBase {
 
 	Actions action;
 	// Verify Link of Infographics & Visualizations page TEST"TC004
-    // another commit shahnoza
+    // another commit shahnoza other
 	VisualizationsPage vp = new VisualizationsPage();
 	HomePage homePage = new HomePage();
 
